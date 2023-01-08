@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu react</title>
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+
+    <script type="text/babel">
+
+        function CompA(props){
+            return(
+                <div>
+                    <p>Nome: {props.nome}</p>
+                </div>
+            )
+        }
+        function App(){
+            return(
+                <div>
+                    <CompA nome = 'Ana'/>
+                    <CompA nome = 'Maria'/>
+                    <CompA nome = 'João'/>
+                    <CompA nome = 'José'/>
+                </div>
+            )
+        }
+      
+        const root = document.getElementById('root');
+        ReactDOM.render(<App/>, root);
+    </script>
+</body>
+
+</html>
